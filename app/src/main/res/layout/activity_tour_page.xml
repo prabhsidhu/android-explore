@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".Tour_page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <!--<TextView-->
+            <!--android:id="@+id/title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:fontFamily="@font/heading"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="Tour"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textSize="24sp" />-->
+
+            <TextView
+                android:id="@+id/culture_into"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/body_text"
+                android:lineSpacingExtra="2sp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/tour_intro"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="12sp" />
+
+            <!--venture category  starts here-->
+
+            <TextView
+                android:id="@+id/title_venture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/heading"
+                android:gravity="center_horizontal"
+                android:text="Venture"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgVenture"
+                android:layout_width="wrap_content"
+                android:layout_height="245dp"
+                android:contentDescription="Venture Image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/vent" />
+
+            <TextView
+                android:id="@+id/venture_into"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/body_text"
+                android:lineSpacingExtra="2sp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/india_intro"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btnVenture"
+
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/edit_color"
+                android:text="View"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="normal" />
+
+
+            <!--Venture category  starts here-->
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <!--tranquaility  category design code starts-->
+            <TextView
+                android:id="@+id/title_tranquility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/heading"
+                android:gravity="center_horizontal"
+                android:text="Tranquility"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgTranquility"
+                android:layout_width="wrap_content"
+                android:layout_height="245dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/tran" />
+
+            <TextView
+                android:id="@+id/brazil_into"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/body_text"
+                android:lineSpacingExtra="2sp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/india_intro"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btnTranquility"
+
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/edit_color"
+                android:text="View"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="normal" />
+
+            <!--tranquaility category design code starts-->
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/mybuttons" />
+</LinearLayout>

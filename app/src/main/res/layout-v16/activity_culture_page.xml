@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".Culture_page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <!--<TextView-->
+            <!--android:id="@+id/title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:fontFamily="@font/heading"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="@string/culture"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textSize="24sp" />-->
+
+            <TextView
+                android:id="@+id/culture_into"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/body_text"
+                android:lineSpacingExtra="2sp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/culture_intro"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="12sp" />
+
+            <!--Indian category  starts here-->
+
+            <TextView
+                android:id="@+id/title_india"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/heading"
+                android:gravity="center_horizontal"
+                android:text="@string/india"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgIndia"
+                android:layout_width="wrap_content"
+                android:layout_height="245dp"
+                android:contentDescription="TODO"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/indian" />
+
+            <TextView
+                android:id="@+id/india_into"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/body_text"
+                android:lineSpacingExtra="2sp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/india_intro"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEventIndia"
+
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/edit_color"
+                    android:text="Event"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btnFoodIndia"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/edit_color"
+                    android:text="Food"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+            <!--Indian category  starts here-->
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <!--brazil category design code starts-->
+            <TextView
+                android:id="@+id/title_brazil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/heading"
+                android:gravity="center_horizontal"
+                android:text="Brazil"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgBrazil"
+                android:layout_width="wrap_content"
+                android:layout_height="245dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/brazil" />
+
+            <TextView
+                android:id="@+id/brazil_into"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/body_text"
+                android:lineSpacingExtra="2sp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/india_intro"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEventBrazil"
+
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/edit_color"
+                    android:text="Event"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btnFoodBrazil"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/edit_color"
+                    android:text="Food"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <!--brazil category design code starts-->
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/mybuttons" />
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Explore</string>
+    <string name="sign_in">SIGN-IN</string>
+    <string name="title">tile</string>
+    <string name="description">The app would allow .</string>
+
+
+    <string name="todo">TODO</string>
+    <string name="sign_out">Sign-Out</string>
+
+
+    <string name="explore_intro">
+        The app would allow different users to explore more about different communities now in British Columbia.
+        The app would focus mainly on four communities ie.. India, Japan, Greek and Brazil.
+        There would be two main categories that would be further categorized on the basis of communities.
+        There would be a feature of Culture and Food through which the user would be able to traverse the communities stated above.
+        There would be information about the events that would be in progress and allow the user to gather information about it.
+    </string>
+
+    <string name="culture_intro">
+     This feature enables the user to explore more about the four different Countries being included in
+    the app ie.. Brazil, Greece, Japan, India. The app is based on this feature which would allow
+    users to attend events from these regions and learn about them. This would also tell the users
+    about the best cuisines from these places in British Columbia.
+    </string>
+
+    <string name="tour_intro">
+     This feature enables the user to explore more about the four different Countries being included in
+    the app ie.. Brazil, Greece, Japan, India. The app is based on this feature which would allow
+    users to attend events from these regions and learn about them. This would also tell the users
+    about the best cuisines from these places in British Columbia.
+    </string>
+
+    <string name="india_intro">
+     This feature enables the user to explore more about the four different Countries being included in
+    the app ie.. Brazil, Greece, Japan, India.
+    </string>
+
+    <string name="culture">Culture</string>
+    <string name="tour">Tour</string>
+    <string name="culture_title">Culture</string>
+    <string name="categories">Categories</string>
+    <string name="categories_title">Categories</string>
+    <string name="india">India</string>
+    <string name="input_error_name">name required</string>
+    <string name="input_error_email">email required</string>
+    <string name="input_error_password">password required</string>
+
+    <string name="input_error_password_length">password should be at least 6 characters long</string>
+    <string name="registration_success">Registered Successfully</string>
+    <string name="input_error_email_invalid">enter a valid email</string>
+    <string name="event_pic">event pic</string>
+    <string name="contact_android_string_emptyphonenumber">contact @android:string/emptyPhoneNumber</string>
+    <string name="title_activity_location_page">Map</string>
+    <string name="register_for">Register for</string>
+
+
+
+    <string-array name="countries">
+        <item>Select Country</item>
+        <item>India</item>
+        <item>Brazil</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Select category</item>
+        <item>Food</item>
+        <item>Event</item>
+    </string-array>
+
+</resources>
