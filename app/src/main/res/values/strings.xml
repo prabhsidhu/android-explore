@@ -53,6 +53,7 @@
     <string name="contact_android_string_emptyphonenumber">contact @android:string/emptyPhoneNumber</string>
     <string name="title_activity_location_page">Map</string>
     <string name="register_for">Register for</string>
+    <string name="testing">Register for</string>
 
 
 
