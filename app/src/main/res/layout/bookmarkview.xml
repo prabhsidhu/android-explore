@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/loading_icon"
+                android:padding="0dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/body_text"
+                android:text="title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:fontFamily="@font/body_text"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/key_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="key"
+                android:visibility="invisible"
+                android:textSize="8sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_horizontal">
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/edit_delete"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btnView"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/edit_color"
+                    android:text="View"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary" />
+
+</LinearLayout>
+

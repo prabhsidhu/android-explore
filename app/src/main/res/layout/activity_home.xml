@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="217dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/SliderDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewPager"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/heading"
+                android:gravity="center_horizontal"
+                android:text="@string/categories_title"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <Button
+                    android:id="@+id/btnCulture"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/edit_color"
+                    android:text="Culture"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btnTour"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/edit_color"
+                    android:text="Tour"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/body_text"
+                android:lineSpacingExtra="2sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/explore_intro"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="16sp"
+                tools:targetApi="jelly_bean" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
