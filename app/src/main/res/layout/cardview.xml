@@ -49,6 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
+                android:lines="2"
+                android:maxLines="2"
                 android:fontFamily="@font/body_text"
                 android:textSize="14sp" />
             <TextView
@@ -60,6 +62,26 @@
                 android:textSize="8sp" />
 
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnDlt"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_delete"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textColorLink="@android:color/white"
+                    android:textStyle="normal" />
 
                 <Button
                     android:id="@+id/btnView"
@@ -68,14 +90,16 @@
                     android:layout_gravity="right"
                     android:layout_marginEnd="4dp"
                     android:layout_marginRight="4dp"
+                    android:layout_weight="1"
                     android:background="@drawable/edit_color"
                     android:text="View"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textStyle="normal" />
 
-        </LinearLayout>
+            </LinearLayout>
 
+        </LinearLayout>
 
     </LinearLayout>
 

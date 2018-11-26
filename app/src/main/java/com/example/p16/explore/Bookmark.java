@@ -27,7 +27,7 @@ public class Bookmark extends MyMenu {
     RecyclerView recyclerView;
     DatabaseReference mref;
     List<Multiple_view> list;
-    BookmarkAdapter adapter;
+    MyAdapter adapter;
     FirebaseAuth mAuth;
 
     @Override
@@ -45,29 +45,29 @@ public class Bookmark extends MyMenu {
 
         FirebaseUser user = mAuth.getInstance().getCurrentUser();
         mref = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid()).child("Bookmark");
+
+
+//        Log.d("Bookmark page", "onCreate: " + mref);
         mref.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                list.clear();
+                for(DataSnapshot dataSnapshot2: dataSnapshot.getChildren()){
 
-                for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
-//                                Log.d("Database", "keyValue: " + key);
-                    Multiple_view value = dataSnapshot1.getValue(Multiple_view.class);
+                    Multiple_view value = dataSnapshot2.getValue(Multiple_view.class);
                     Multiple_view v = new Multiple_view();
-                    String key = dataSnapshot1.getKey();
+                    String key = dataSnapshot2.getKey();
                     String title = value.getName();
                     String description = value.getDescription();
-                    String image = value.getImage();
-
+                    Log.d("Bookmark " , "onDataChange: " + dataSnapshot2.getKey());
+                    v.setBookmark(true);
                     v.setKey(key);
                     v.setName(title);
-                    v.setImage(image);
                     v.setDescription(description);
-
                     list.add(v);
                 }
-                adapter.notifyDataSetChanged();
-                adapter = new BookmarkAdapter(Bookmark.this,list);
+                adapter = new MyAdapter(Bookmark.this,list);
                 recyclerView.setAdapter(adapter);
 
             }

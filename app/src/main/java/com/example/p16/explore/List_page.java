@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class List_page extends MyMenu {
@@ -54,6 +55,7 @@ public class List_page extends MyMenu {
                     mref.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            list.clear();
                             for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
 
 //                              Log.d("Database", "keyValue: " + key);
@@ -63,11 +65,28 @@ public class List_page extends MyMenu {
                                 String title = value.getName();
                                 String description = value.getDescription();
                                 String image = value.getImage();
-                                Log.d("List_Page", "onDataChange: " + value.getDate());
+                               String date = value.getDate();
+//                                String time = value.getTime();
+
+                                String place = value.getPlace();
+                                String address = value.getAddress();
+                                String register =  value.getRegister();
+                                String contact =  value.getContact();
+                                String menu = value.getMenu();
+
+                                Log.d("test contact", "onDataChange: " + value.getContact());
+                                v.setBookmark(false);
                                 v.setKey(key);
                                 v.setName(title);
                                 v.setImage(image);
                                 v.setDescription(description);
+                                v.setDate(date);
+//                                v.setTime(time);
+                                v.setAddress(address);
+                                v.setPlace(place);
+                                v.setRegister(register);
+                                v.setContact(contact);
+                                v.setMenu(menu);
 
                                 list.add(v);
                 }

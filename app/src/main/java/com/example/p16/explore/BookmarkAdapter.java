@@ -12,24 +12,24 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.MyViewHolder> {
+
+
+public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.BookmarkViewHolder> {
 
     Context context;
     public List<Multiple_view> views;
     private FirebaseAuth mAuth;
     FirebaseDatabase databaseRef = FirebaseDatabase.getInstance();
     DatabaseReference mref = databaseRef.getReference("Users") ;
-public BookmarkAdapter(Context c, List<Multiple_view> v){
+     public BookmarkAdapter(Context c, List<Multiple_view> v){
         context = c;
         views = v;
         }
@@ -37,84 +37,59 @@ public BookmarkAdapter(Context c, List<Multiple_view> v){
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.bookmarkview,parent,false));
+    public BookmarkViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return new BookmarkViewHolder(LayoutInflater.from(context).inflate(R.layout.cardview, viewGroup, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BookmarkAdapter.MyViewHolder holder, int position) {
-        final Multiple_view list = views.get(position);
-        holder.name.setText(list.getName());
-        holder.description.setText(list.getDescription());
-        holder.key.setText(list.getKey());
-        Picasso.get().load(list.getImage()).into(holder.image);
-        holder.btn.setOnClickListener(new View.OnClickListener() {
+    public void onBindViewHolder(@NonNull BookmarkViewHolder vHolder, int position) {
+              final Multiple_view l = views.get(position);
+        vHolder.bname.setText(l.getName());
+//        vHolder.bdescription.setText(l.getDescription());
+//        vHolder.bkey.setText(l.getKey());
+//        Picasso.get().load(l.getImage()).into(vHolder.img);
+        vHolder.bbtn.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View v) {
                 Intent i =new Intent(v.getContext(),Single_view.class);
-                i.putExtra("data",list);
-
-                i.putExtra("title", "Event");
-                i.putExtra("Name",list.getName());
-                i.putExtra("ID",list.getKey());
-
-                i.putExtra("description",list.getDescription());
-                i.putExtra("image",list.getImage());
+                i.putExtra("data",l);
                 context.startActivity(i);
                 Log.d("Tag", "clicked");
 
+
             }
         });
-
-        holder.btnDlt.setOnClickListener(new View.OnClickListener() {
+        vHolder.btnDlt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                delete();
-                FirebaseUser user = mAuth.getInstance().getCurrentUser();
-                DatabaseReference bookmarkRef = mref.child(user.getUid()).child("Bookmark");
-                bookmarkRef.child(list.getKey().toString()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Log.d("Delete", "onComplete: Removed " );
-
-                        }
-                        else{
-                            Log.d("Delete", "onComplete: Not removed");
-                        }
-                    }
-                });
+                Log.d("Testing", "clicked");
             }
         });
     }
 
-
-
-
     @Override
-public int getItemCount() {
-        return  views.size();
-        }
-
-public  class MyViewHolder extends RecyclerView.ViewHolder{
-
-    TextView name,description, key;
-    ImageView image;
-    Button btn, btnDlt;
-    public MyViewHolder(@NonNull View itemView) {
-        super(itemView);
-        name = (TextView) itemView.findViewById(R.id.event_name);
-        key = (TextView) itemView.findViewById(R.id.key_value);
-        description = (TextView) itemView.findViewById(R.id.description);
-        image = (ImageView) itemView.findViewById(R.id.image);
-        btn = (Button) itemView.findViewById(R.id.btnView);
-
-        btnDlt = (Button) itemView.findViewById(R.id.btnDelete);
-
+    public int getItemCount() {
+        return views.size();
     }
 
-}
+    public static class BookmarkViewHolder extends RecyclerView.ViewHolder{
+
+        TextView bname,bdescription, bkey;
+        ImageView img;
+        Button bbtn, btnDlt;
+
+        public BookmarkViewHolder(@NonNull View itemView) {
+            super(itemView);
+            bname = (TextView) itemView.findViewById(R.id.bname);
+            bkey = (TextView) itemView.findViewById(R.id.bkey_value);
+            bdescription = (TextView) itemView.findViewById(R.id.bdescription);
+           img = (ImageView) itemView.findViewById(R.id.bimage);
+            bbtn = (Button) itemView.findViewById(R.id.bbtnView);
+            btnDlt = (Button) itemView.findViewById(R.id.bbtnDelete);
+        }
+    }
+
 
 }

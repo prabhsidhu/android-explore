@@ -24,15 +24,17 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
 
 public class Single_view extends MyMenu {
 
-    TextView name, date, description, key;
+    TextView name, date, description, key, address, txtMenu;
     ImageView image;
     private FirebaseAuth mAuth;
- ImageButton bookmark;
+    ImageButton bookmark;
     FirebaseDatabase databaseRef = FirebaseDatabase.getInstance();
-    DatabaseReference mref = databaseRef.getReference("Users") ;
 
     //getting current user
     FirebaseUser user = mAuth.getInstance().getCurrentUser();
@@ -41,12 +43,9 @@ public class Single_view extends MyMenu {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_view);
 
-        Bundle b =  getIntent().getExtras();
+        Bundle b = getIntent().getExtras();
         final Multiple_view d = (Multiple_view) b.getSerializable("data");
-        Log.d("testing", d.getName());
-
         final String sName = b.getString("Name");
-
 
 
         ActionBar actionbar = getSupportActionBar();
@@ -56,17 +55,38 @@ public class Single_view extends MyMenu {
         image = (ImageView) findViewById(R.id.eventPic);
         name = (TextView) findViewById(R.id.name_title);
         description = (TextView) findViewById(R.id.event_description);
-
+        date = (TextView) findViewById(R.id.txtDate);
+        address = (TextView) findViewById(R.id.address);
         key = new TextView(this);
-         key.setText(d.getKey());
+        txtMenu = (TextView) findViewById(R.id.ChkMenu);
+
+        if(d.getMenu() == null){
+            txtMenu.setVisibility(View.GONE);
+        }
+
+        if (d.getDate() == null) {
+            date.setVisibility(View.GONE);
+        }
+
+
+        // set values to each fields
+        key.setText(d.getKey());
         name.setText(d.getName());
+        Picasso.get().load(d.getImage()).into(image);
+//        date.setText(d.getDate() + " at " );
+        description.setText(d.getDescription());
+        address.setText(d.getPlace() + " , " + d.getAddress());
+
 
         ImageButton contact = (ImageButton) findViewById(R.id.contact);
+        if(d.getContact() == null){
+            contact.setVisibility(View.GONE);
+        }
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:0123456789"));
+                intent.setData(Uri.parse("tel:" + d.getContact()));
                 startActivity(intent);
             }
         });
@@ -75,24 +95,24 @@ public class Single_view extends MyMenu {
         location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Single_view.this,Location_page.class);
+                Intent i = new Intent(Single_view.this, Location_page.class);
+                i.putExtra("address", d.getAddress());
+                i.putExtra("place", d.getPlace());
                 startActivity(i);
             }
         });
 
 
+        // check if user already stored event in bookmark
 
-        // check if user already stored in bookmark
-
-        mref = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid()).child("Bookmark");
+        DatabaseReference mref = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid()).child("Bookmark");
         mref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild(key.getText().toString())){
-                    Log.d("Bookmark", "onDataChange: " + dataSnapshot.hasChild(key.getText().toString()) );
+                if (dataSnapshot.hasChild(key.getText().toString())) {
+                    Log.d("Bookmark", "onDataChange: " + dataSnapshot.hasChild(key.getText().toString()));
                     bookmark.setVisibility(View.INVISIBLE);
-                }
-                else{
+                } else {
                     bookmark.setVisibility(View.VISIBLE);
                 }
             }
@@ -107,39 +127,42 @@ public class Single_view extends MyMenu {
         bookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "clicked", Toast.LENGTH_SHORT).show();
-//                setVisible(false);
-//                bookmark.setVisibility(View.INVISIBLE);
-               Log.d("Test", "multiple view "+ d.getKey());
 
-               bookmarkMethod();
+                bookmarkMethod();
             }
         });
         Button register = (Button) findViewById(R.id.btnRegistration);
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-             Intent registerIntent = new Intent( Single_view.this,RegistrationView.class);
-             registerIntent.putExtra("Title", sName);
-                startActivity(registerIntent);
-            }
-        });
+        if (d.getRegister() == null) {
+            register.setVisibility(View.GONE);
+        } else {
+            register.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
+                    Intent registerIntent = new Intent(Single_view.this, RegistrationView.class);
+                    registerIntent.putExtra("Title", sName);
+                    startActivity(registerIntent);
+                }
+            });
+
+        }
     }
-
     private void bookmarkMethod() {
         Log.d("BookMark", "bookmarkMethod: " + key);
 
-
         Log.d("Firebase user", "bookmarkMethod: "+ user.getUid());
         // saving the information into bookmark table in current user table
-         DatabaseReference bookmarkRef = mref.child(user.getUid()).child("Bookmark").child(key.getText().toString());
-            bookmarkRef.child("Name").setValue(name.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+        DatabaseReference mref = databaseRef.getReference("Users/" + user.getUid()).child("Bookmark").child(key.getText().toString()) ;
+
+         mref.child("Name").setValue(name.getText().toString());
+         mref.child("Description").setValue(description.getText().toString()).
+                addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                        if(task.isSuccessful()){
                            Log.d("BookMark", "onComplete: Stored" );
+                           Toast.makeText(getApplicationContext(), "Saved as Bookmark", Toast.LENGTH_SHORT).show();
                            bookmark.setVisibility(View.INVISIBLE);
                        }
                        else{

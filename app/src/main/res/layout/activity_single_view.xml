@@ -16,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:orientation="vertical">
 
             <ImageView
@@ -25,7 +26,8 @@
                 android:contentDescription="@string/event_pic"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
-                app:srcCompat="@drawable/indian" />
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/loading_icon" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,7 +46,6 @@
                     android:padding="5dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/phone" />
-
 
 
                 <ImageButton
@@ -69,14 +70,12 @@
                     app:srcCompat="@drawable/locationnew" />
 
 
-
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -90,11 +89,48 @@
                     android:textSize="20sp" />
 
                 <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5sp"
+                    android:drawableLeft="@drawable/calendernew"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/body_text"
+                    android:gravity="center_vertical"
+                    android:text="2018"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:drawableLeft="@drawable/location_24"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/body_text"
+                    android:gravity="center_vertical"
+                    android:text="test"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ChkMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/body_text"
+                    android:text="test"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+                <TextView
                     android:id="@+id/event_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
 
+                    android:layout_marginTop="5sp"
                     android:fontFamily="@font/body_text"
                     android:lineSpacingExtra="2sp"
                     android:paddingBottom="8dp"

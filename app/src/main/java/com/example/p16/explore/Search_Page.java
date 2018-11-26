@@ -107,9 +107,7 @@ public class Search_Page extends MyMenu {
                     v.setName(title);
                     v.setImage(image);
                     v.setDescription(description);
-
                     list.add(v);
-
                 }
                 adapter = new MyAdapter(Search_Page.this,list);
                 recyclerView.setAdapter(adapter);

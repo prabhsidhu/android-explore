@@ -19,6 +19,8 @@ public class Location_page extends FragmentActivity implements OnMapReadyCallbac
 
     private GoogleMap mMap;
 
+    String locationAddress;
+    String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,10 @@ public class Location_page extends FragmentActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        Bundle b =  getIntent().getExtras();
+       locationAddress = b.getString("address");
+        title = b.getString("place");
+
     }
 
     public LatLng getLocationFromAddress(Context context, String strAddress)
@@ -69,8 +75,9 @@ public class Location_page extends FragmentActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng address = getLocationFromAddress(this, ("100 W 49th Ave, Vancouver, BC V5Y 2Z6"));
-        mMap.addMarker(new MarkerOptions().position(address).title("Langara"));
+
+        LatLng address = getLocationFromAddress(this, (locationAddress));
+        mMap.addMarker(new MarkerOptions().position(address).title(title));
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(address));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(address, 12.0f));
     }

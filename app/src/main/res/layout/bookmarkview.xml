@@ -19,7 +19,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/bimage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/loading_icon"
@@ -35,7 +35,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/event_name"
+                android:id="@+id/bname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/body_text"
@@ -45,14 +45,14 @@
                 android:textStyle="normal" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/bdescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/description"
                 android:fontFamily="@font/body_text"
                 android:textSize="14sp" />
             <TextView
-                android:id="@+id/key_value"
+                android:id="@+id/bkey_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="key"
@@ -65,7 +65,7 @@
                 android:gravity="right|center_horizontal">
 
                 <Button
-                    android:id="@+id/btnDelete"
+                    android:id="@+id/bbtnDelete"
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:layout_gravity="right"
@@ -78,7 +78,7 @@
                     android:textStyle="normal" />
 
                 <Button
-                    android:id="@+id/btnView"
+                    android:id="@+id/bbtnView"
                     android:layout_width="80dp"
                     android:layout_height="30dp"
                     android:layout_gravity="right"

@@ -19,17 +19,17 @@
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/logo1" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/title"-->
-        <!--android:layout_width="170dp"-->
-        <!--android:layout_height="wrap_content"-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
 
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:fontFamily="@font/heading"-->
-        <!--android:gravity="center_horizontal"-->
-        <!--android:padding="5dp"-->
-        <!--android:text="Explore"-->
-        <!--android:textColor="@android:color/white"-->
-        <!--android:textSize="35sp"-->
-        <!--android:typeface="sans" />-->
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/heading"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="Explore"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:typeface="sans" />
 </LinearLayout>
