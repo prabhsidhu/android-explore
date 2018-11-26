@@ -51,6 +51,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         Picasso.get().load(list.getImage()).into(holder.image);
         if(list.getBookmark() == false){
             holder.btnDlt.setVisibility(View.GONE);
+        }else{
+            holder.btnDlt.setVisibility(View.VISIBLE);
         }
 
         Log.d("Testing", "onBindViewHolder: " + list.getBookmark());

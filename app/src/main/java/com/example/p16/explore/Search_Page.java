@@ -102,7 +102,7 @@ public class Search_Page extends MyMenu {
                     String title = value.getName();
                     String description = value.getDescription();
                     String image = value.getImage();
-
+                    v.setBookmark(false);
                     v.setKey(key);
                     v.setName(title);
                     v.setImage(image);

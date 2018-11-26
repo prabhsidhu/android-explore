@@ -81,6 +81,8 @@ public class List_page extends MyMenu {
                                 v.setImage(image);
                                 v.setDescription(description);
                                 v.setDate(date);
+
+                                v.setBookmark(false);
 //                                v.setTime(time);
                                 v.setAddress(address);
                                 v.setPlace(place);
