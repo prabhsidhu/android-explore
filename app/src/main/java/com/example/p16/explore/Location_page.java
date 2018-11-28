@@ -5,6 +5,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -40,23 +41,24 @@ public class Location_page extends FragmentActivity implements OnMapReadyCallbac
     {
         Geocoder coder= new Geocoder(context);
         List<Address> address;
-        LatLng p1 = null;
+        LatLng p1 = null; // Define a default location
 
         try
         {
-            address = coder.getFromLocationName(strAddress, 5);
-            if(address==null)
-            {
-                return null;
-            }
-            Address location = address.get(0);
-            location.getLatitude();
-            location.getLongitude();
+            // Check if location method are available
+            if (coder.isPresent()) {
+                address = coder.getFromLocationName(strAddress, 5);
+                Log.d("Location Page", "getLocationFromAddress: " + address);
+                Address location = address.get(0);
+                location.getLatitude();
+                location.getLongitude();
 
-            p1 = new LatLng(location.getLatitude(), location.getLongitude());
+                p1 = new LatLng(location.getLatitude(), location.getLongitude());
+            }
         }
         catch (Exception e)
         {
+            Log.d("location page", "error inside catch");
             e.printStackTrace();
         }
         return p1;
@@ -77,8 +79,10 @@ public class Location_page extends FragmentActivity implements OnMapReadyCallbac
         mMap = googleMap;
 
         LatLng address = getLocationFromAddress(this, (locationAddress));
-        mMap.addMarker(new MarkerOptions().position(address).title(title));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(address));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(address, 12.0f));
+        if (address != null) {
+            mMap.addMarker(new MarkerOptions().position(address).title(title));
+            //        mMap.moveCamera(CameraUpdateFactory.newLatLng(address));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(address, 12.0f));
+        }
     }
 }

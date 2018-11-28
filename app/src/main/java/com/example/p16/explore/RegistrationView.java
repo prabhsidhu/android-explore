@@ -22,6 +22,8 @@ public class RegistrationView extends MyMenu {
 
         Bundle b =  getIntent().getExtras();
         String title = b.getString("Title");
+        String formUrl = b.getString("Url");
+
         TextView txtTitle = (TextView) findViewById(R.id.register);
 
         txtTitle.setText("Register for : " + title);
@@ -30,7 +32,7 @@ public class RegistrationView extends MyMenu {
         WebView webView = (WebView) findViewById(R.id.register_view);
         webView.getSettings().setJavaScriptEnabled(true);
 
-        webView.loadUrl("https://www.calculator.net/volume-calculator.html");
+        webView.loadUrl(formUrl);
         webView.setWebViewClient(new WebViewClient() {
             /*
                 shouldOverrideUrlLoading(WebView view, WebResourceRequest request)

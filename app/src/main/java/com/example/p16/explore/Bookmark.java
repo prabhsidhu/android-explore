@@ -59,12 +59,25 @@ public class Bookmark extends MyMenu {
                     Multiple_view v = new Multiple_view();
                     String key = dataSnapshot2.getKey();
                     String title = value.getName();
+                    String image = value.getImage();
                     String description = value.getDescription();
-                    Log.d("Bookmark " , "onDataChange: " + dataSnapshot2.getKey());
+                    String date = value.getDate();
+                    String time = value.getTime();
+                    String place = value.getPlace();
+                    String address = value.getAddress();
+                    String register =  value.getRegister();
+                    String contact =  value.getContact();
                     v.setBookmark(true);
                     v.setKey(key);
+                    v.setImage(image);
                     v.setName(title);
                     v.setDescription(description);
+                    v.setDate(date);
+                    v.setTime(time);
+                    v.setAddress(address);
+                    v.setPlace(place);
+                    v.setRegister(register);
+                    v.setContact(contact);
                     list.add(v);
                 }
                 adapter = new MyAdapter(Bookmark.this,list);

@@ -17,9 +17,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class List_page extends MyMenu {
 
@@ -41,6 +43,8 @@ public class List_page extends MyMenu {
 
         ActionBar actionbar = getSupportActionBar();
         actionbar.setTitle(title);
+
+        final String date1 = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
 
 
         recyclerView = findViewById(R.id.recyclerListView);
@@ -66,7 +70,7 @@ public class List_page extends MyMenu {
                                 String description = value.getDescription();
                                 String image = value.getImage();
                                String date = value.getDate();
-//                                String time = value.getTime();
+                                String time = value.getTime();
 
                                 String place = value.getPlace();
                                 String address = value.getAddress();
@@ -83,14 +87,21 @@ public class List_page extends MyMenu {
                                 v.setDate(date);
 
                                 v.setBookmark(false);
-//                                v.setTime(time);
+                                v.setTime(time);
                                 v.setAddress(address);
                                 v.setPlace(place);
                                 v.setRegister(register);
                                 v.setContact(contact);
                                 v.setMenu(menu);
-
-                                list.add(v);
+                                if(date != null) {
+                                    if (date1.compareTo(date) < 1) {
+                                        list.add(v);
+                                    } else {
+                                        list.remove(v);
+                                    }
+                                }else{
+                                    list.add(v);
+                                }
                 }
                adapter = new MyAdapter(List_page.this,list);
                recyclerView.setAdapter(adapter);

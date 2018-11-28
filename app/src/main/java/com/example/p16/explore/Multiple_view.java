@@ -9,7 +9,7 @@ public class Multiple_view implements Serializable {
     private String Image;
     private String Key;
     private String Date;
-//    private String Time;
+    private String Time;
     private String Place;
     private String Address;
 //    private Long Date;
@@ -28,11 +28,11 @@ public class Multiple_view implements Serializable {
         Image = image;
         Key = key;
         Date = date;
-//        Time  = time;
+        Time  = time;
         Address = address;
         Place = place;
         Register = register;
-//        Contact = contact;
+        Contact = contact;
         Menu = menu;
         Bookmark = bookmark;
 
@@ -87,14 +87,13 @@ public class Multiple_view implements Serializable {
         Address = address;
     }
 
-//    public String getTime() {
-//        return Time;
-//    }
-//
-//    public void setTime(String time) {
-//        Time = time;
-//    }
-//
+    public String getTime() {
+        return Time;
+    }
+
+    public void setTime(String time) {
+        Time = time;
+    }
 
 
     public String getDate() {

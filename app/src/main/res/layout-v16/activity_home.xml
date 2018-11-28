@@ -141,15 +141,15 @@
             <TextView
                 android:id="@+id/introduction"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="right|center_vertical"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/body_text"
                 android:lineSpacingExtra="2sp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/explore_intro"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="12sp" />

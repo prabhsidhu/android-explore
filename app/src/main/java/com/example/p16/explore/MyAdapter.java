@@ -65,9 +65,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 i.putExtra("data",list);
                 context.startActivity(i);
                 Log.d("Tag", "clicked");
-                if(list.getDate() == null){
-                    Toast.makeText(v.getContext(),"invisible", Toast.LENGTH_SHORT).show();
-                }
+//                if(list.getDate() == null){
+//                    Toast.makeText(v.getContext(),"invisible", Toast.LENGTH_SHORT).show();
+//                }
 
             }
         });
