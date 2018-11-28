@@ -62,7 +62,7 @@
             <ImageView
                 android:id="@+id/imgIndia"
                 android:layout_width="wrap_content"
-                android:layout_height="245dp"
+                android:layout_height="200sp"
                 android:contentDescription="TODO"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/indian" />
@@ -140,7 +140,7 @@
             <ImageView
                 android:id="@+id/imgBrazil"
                 android:layout_width="wrap_content"
-                android:layout_height="245dp"
+                android:layout_height="200sp"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/brazil" />
 
