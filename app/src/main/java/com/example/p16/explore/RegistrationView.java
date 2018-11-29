@@ -32,6 +32,8 @@ public class RegistrationView extends MyMenu {
         WebView webView = (WebView) findViewById(R.id.register_view);
         webView.getSettings().setJavaScriptEnabled(true);
 
+
+        // passing the form url of event regisration if event organisers have
         webView.loadUrl(formUrl);
         webView.setWebViewClient(new WebViewClient() {
             /*

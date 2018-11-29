@@ -85,9 +85,7 @@ public class Search_Page extends MyMenu {
         countries = country.getSelectedItem().toString();
         category = categories.getSelectedItem().toString();
 
-        Log.d("Testing search", "firebaseSearch: "+ countries);
-        Log.d("Testing search", "firebaseSearch: "+ category);
-
+        // searching by country and categories and also typing any keyword for name of the event
         mref= FirebaseDatabase.getInstance().getReference(category).child(countries);
         Query query = mref.orderByChild("Name").startAt(text).endAt(text+ "\uf8ff");
 
@@ -99,18 +97,34 @@ public class Search_Page extends MyMenu {
                 for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
                     Multiple_view value = dataSnapshot1.getValue(Multiple_view.class);
                     Multiple_view v = new Multiple_view();
-                    String key = dataSnapshot1.getKey();
-                    Log.d("Firebase search Query", "result" + key);
 
-                    Log.d("Firebase search Query", "result" + value.getName());
+                    // fetching data from firebase and storing in variables
+                    String key = dataSnapshot1.getKey();
                     String title = value.getName();
                     String description = value.getDescription();
                     String image = value.getImage();
+                    String date = value.getDate();
+                    String time = value.getTime();
+
+                    String place = value.getPlace();
+                    String address = value.getAddress();
+                    String register =  value.getRegister();
+                    String contact =  value.getContact();
+                    String menu = value.getMenu();
+
+                    // setting values
                     v.setBookmark(false);
                     v.setKey(key);
                     v.setName(title);
                     v.setImage(image);
                     v.setDescription(description);
+                    v.setDate(date);
+                    v.setTime(time);
+                    v.setAddress(address);
+                    v.setPlace(place);
+                    v.setRegister(register);
+                    v.setContact(contact);
+                    v.setMenu(menu);
                     list.add(v);
                 }
                 adapter = new MyAdapter(Search_Page.this,list);

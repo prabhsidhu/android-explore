@@ -152,7 +152,7 @@
                 android:paddingBottom="8dp"
                 android:text="@string/explore_intro"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textSize="12sp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </ScrollView>
 

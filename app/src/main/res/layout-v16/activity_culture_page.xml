@@ -40,11 +40,11 @@
 
                 android:fontFamily="@font/body_text"
                 android:lineSpacingExtra="2sp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/culture_intro"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textSize="12sp" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
 
             <!--Indian category  starts here-->
 
@@ -56,7 +56,7 @@
                 android:fontFamily="@font/heading"
                 android:gravity="center_horizontal"
                 android:text="@string/india"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="25sp" />
 
             <ImageView
@@ -75,11 +75,11 @@
 
                 android:fontFamily="@font/body_text"
                 android:lineSpacingExtra="2sp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/india_intro"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textSize="12sp" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
 
 
             <LinearLayout
@@ -134,7 +134,7 @@
                 android:fontFamily="@font/heading"
                 android:gravity="center_horizontal"
                 android:text="Brazil"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="25sp" />
 
             <ImageView
@@ -152,11 +152,11 @@
 
                 android:fontFamily="@font/body_text"
                 android:lineSpacingExtra="2sp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
-                android:text="@string/india_intro"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textSize="12sp" />
+                android:paddingBottom="8dp"
+                android:text="@string/brazil_intro"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
 
 
             <LinearLayout

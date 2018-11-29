@@ -19,22 +19,27 @@
 
     <string name="culture_intro">
      This feature enables the user to explore more about the four different Countries being included in
-    the app ie.. Brazil, Greece, Japan, India. The app is based on this feature which would allow
-    users to attend events from these regions and learn about them. This would also tell the users
-    about the best cuisines from these places in British Columbia.
+the application - Brazil, India. The app is based on this feature which would allow users to attend
+events from these regions and learn about them. This would also tell the users about the best
+cuisines from these places in British Columbia.
     </string>
 
     <string name="tour_intro">
-     This feature enables the user to explore more about the four different Countries being included in
-    the app ie.. Brazil, Greece, Japan, India. The app is based on this feature which would allow
-    users to attend events from these regions and learn about them. This would also tell the users
-    about the best cuisines from these places in British Columbia.
+     This would allow the user to go on ventures and be a part of tranquility. The user will be able to
+     see the top most rated adventures and relaxation places around them. This feature will allow the
+     user to check how far there destination is from their location and they can plan their trip
+     accordingly.
     </string>
 
     <string name="india_intro">
-     This feature enables the user to explore more about the four different Countries being included in
-    the app ie.. Brazil, Greece, Japan, India.
+         The culture of India refers collectively to the thousands of distinct and unique
+        cultures of all religions and communities present in India.
+        India\'s languages, religions, dance, music, architecture, food,
+        and customs differ from place to place within the country.
+        Indian culture, often labeled as an amalgamation of several cultures,
+        spans across the Indian subcontinent and has been influenced by a history that is several millennia old.
     </string>
+ <string name="brazil_intro">The culture of Brazil is primarily Western, but presents a very diverse nature showing that an ethnic and cultural mixing occurred in the colonial period involving mostly Indigenous peoples of the coastal and most accessible riverine areas, Portuguese people and African people.</string>
 
     <string name="culture">Culture</string>
     <string name="tour">Tour</string>

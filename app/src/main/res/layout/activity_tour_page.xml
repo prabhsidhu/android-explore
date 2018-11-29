@@ -10,14 +10,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="12">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:orientation="vertical"
             android:paddingLeft="8dp"
             android:paddingRight="8dp">
 
@@ -39,8 +38,8 @@
 
                 android:fontFamily="@font/body_text"
                 android:lineSpacingExtra="2sp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/tour_intro"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="12sp" />
@@ -74,9 +73,9 @@
 
                 android:fontFamily="@font/body_text"
                 android:lineSpacingExtra="2sp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
-                android:text="@string/india_intro"
+                android:paddingBottom="8dp"
+                android:text="Various adventurous spots would be highlighted through this feature for venture lovers. Provides map locations for easy access of users. The particular spot can be bookmarked for later use."
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="12sp" />
 
@@ -134,9 +133,9 @@
 
                 android:fontFamily="@font/body_text"
                 android:lineSpacingExtra="2sp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
-                android:text="@string/india_intro"
+                android:paddingBottom="8dp"
+                android:text="This feature will locate different peaceful locations for peace loving and calm audience. Provides map locations for easy access of users.The particular spot can be bookmarked for later use."
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="12sp" />
 
@@ -147,9 +146,9 @@
                 android:layout_width="100dp"
                 android:layout_height="35dp"
                 android:layout_gravity="right"
-                android:layout_marginBottom="10dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginRight="4dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/edit_color"
                 android:text="View"
                 android:textAllCaps="false"
