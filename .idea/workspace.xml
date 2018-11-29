@@ -23,25 +23,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79d49c3-8569-4964-bef1-1313bdea87e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="b79d49c3-8569-4964-bef1-1313bdea87e5" name="Default" comment="&quot;final version before submitting the android project&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/BookmarkAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/List_page.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/List_page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/RegistrationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/RegistrationView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/Search_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/Search_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-v16/activity_culture_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-v16/activity_culture_page.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-v16/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-v16/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tour_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tour_page.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -2469,7 +2452,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543383112000</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;final version before submitting the android project&quot;">
+      <created>1543468788721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543468788721</updated>
+    </task>
+    <task id="LOCAL-00006" summary="&quot;final version before submitting the android project&quot;">
+      <created>1543468874587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543468874587</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2482,10 +2479,10 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.11417004" side_tool="true" weight="0.3539823" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.66477734" side_tool="true" visible="true" weight="0.32920355" />
       <window_info anchor="right" id="Preview" order="4" weight="0.74412954" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3858407" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32920355" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.33522266" visible="true" weight="0.32920355" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Logcat" order="7" weight="0.32920355" />
       <window_info id="Captures" order="2" weight="0.25" />
@@ -2550,23 +2547,10 @@
     <MESSAGE value="&quot;Fix the bookmark page and search page(footer hide when keyboard appear)&quot;" />
     <MESSAGE value="&quot;last modification on 27novenber 2018&#10;&quot;" />
     <MESSAGE value="&quot;add new register page&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;add new register page&quot;" />
+    <MESSAGE value="&quot;final version before submitting the android project&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;final version before submitting the android project&quot;" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/Search_Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/MyAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/Location_page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -2926,11 +2910,21 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/p16/explore/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/assetWizardSettings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu.xml">
