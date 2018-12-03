@@ -68,7 +68,8 @@
         <activity
             android:name=".Search_Page"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".RegisterPage"></activity>
+        <activity android:name=".RegisterPage" />
+        <activity android:name=".MenuView"></activity>
     </application>
 
 </manifest>

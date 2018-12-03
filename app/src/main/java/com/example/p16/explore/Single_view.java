@@ -40,7 +40,7 @@ public class Single_view extends MyMenu {
     private FirebaseAuth mAuth;
     ImageButton bookmark;
     FirebaseDatabase databaseRef = FirebaseDatabase.getInstance();
-    String imgUri , place, addr, eventDate, eventTime, phonenumber, registerTxt;
+    String imgUri , place, addr, eventDate, eventTime, phonenumber, registerTxt, menuTxt;
     //getting current user
     FirebaseUser user = mAuth.getInstance().getCurrentUser();
 
@@ -71,13 +71,11 @@ public class Single_view extends MyMenu {
         imgUri = d.getImage();
         phonenumber = d.getContact();
         registerTxt = d.getRegister();
+        menuTxt = d.getMenu();
         String eAddress = place + " , " + addr;
         String eTimeDate = eventDate + " at " + eventTime;
 
-        // check if the page open the resturant information
-        if(d.getMenu() == null){
-            txtMenu.setVisibility(View.GONE);
-        }
+
 
         // hide the date field if its on food, tranquility and venture page
         if (d.getDate() == null) {
@@ -169,7 +167,20 @@ public class Single_view extends MyMenu {
             });
 
         }
+        Button btnChkMenu = (Button) findViewById(R.id.btnMenu);
+        // check if the page open the resturant information
+        if(d.getMenu() == null){
+            btnChkMenu.setVisibility(View.GONE);
+        }else{
+            Intent menuIntent = new Intent(Single_view.this, MenuView.class);
+            menuIntent.putExtra("MenuLink", menuTxt);
+            menuIntent.putExtra("Title", name.getText().toString());
+            startActivity(menuIntent);
+        }
+
     }
+// Check menu button
+
 
 
     // bookmark methos for bookmark button

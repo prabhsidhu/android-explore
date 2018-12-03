@@ -95,6 +95,7 @@ public class Search_Page extends MyMenu {
                 list.clear();
 
                 for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
+
                     Multiple_view value = dataSnapshot1.getValue(Multiple_view.class);
                     Multiple_view v = new Multiple_view();
 

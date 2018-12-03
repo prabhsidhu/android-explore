@@ -157,6 +157,18 @@
                         android:textAllCaps="false"
                         android:textColor="#fff"
                         android:textStyle="normal" />
+                    <Button
+                        android:id="@+id/btnMenu"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/edit_color"
+                        android:text="Check Menu"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textStyle="normal" />
+
 
                 </LinearLayout>
 
